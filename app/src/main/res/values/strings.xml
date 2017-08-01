@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Expense_Manager</string>
+    <string name="network_error">please check your connection</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="btn_continue">continue</string>
+    <string name="date">please choose date first</string>
+    <string name="title_activity_adduser">Adduser</string>
+</resources>
