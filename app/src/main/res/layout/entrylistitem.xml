@@ -66,10 +66,11 @@
         android:backgroundTint="@android:color/black"
 
         card_view:cardCornerRadius="4dp">
-<LinearLayout
+<RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:weightSum="1">
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
@@ -82,10 +83,12 @@
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="230dp"
+        android:layout_marginRight="40dp"
+        android:layout_alignParentRight="true"
         android:textColor="@android:color/white"
-        android:text="....." />
-</LinearLayout>
+        android:text="........"
+        android:layout_weight="0.15" />
+</RelativeLayout>
 
 
 

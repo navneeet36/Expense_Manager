@@ -34,7 +34,7 @@ tools:context="com.example.hp.expense_manager.Activities.AdminPanel">
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/acctoaccount"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -43,7 +43,7 @@ tools:context="com.example.hp.expense_manager.Activities.AdminPanel">
             android:ems="20" />
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/acctoentries"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="40dp"
 
             android:layout_marginLeft="10dp"

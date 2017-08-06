@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     tools:context="com.example.hp.expense_manager.Activities.AdminPanel">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +35,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:scrollbars="horizontal"
         android:id="@+id/recycler"
@@ -45,11 +48,11 @@
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="170dp"
         android:layout_gravity="center"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:padding="4dp"
         android:backgroundTint="@color/common_google_signin_btn_text_light_disabled"
 
@@ -64,9 +67,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/black"
                 android:text="Income :"
-                android:layout_marginTop="30sp"
+                android:layout_marginTop="30dp"
                 android:textSize="20dp"
-                android:layout_marginLeft="20sp"
+                android:layout_marginLeft="20dp"
                 />
             <TextView
                 android:id="@+id/expense"
@@ -76,9 +79,9 @@
                 android:textColor="@android:color/black"
 
                 android:layout_below="@+id/income"
-                android:layout_marginTop="20sp"
-                android:textSize="20sp"
-                android:layout_marginLeft="20sp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
                 />
             <TextView
                 android:id="@+id/total"
@@ -86,9 +89,10 @@
                 android:layout_height="wrap_content"
                 android:text="Total :"
                 android:layout_below="@+id/expense"
-                android:layout_marginTop="20sp"
-                android:textSize="20sp"
-                android:layout_marginLeft="20sp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
                 android:textColor="@android:color/black"
 
                 />
@@ -97,12 +101,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="......"
-                android:layout_marginTop="30sp"
-                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
                 android:layout_alignParentRight="true"
                 android:textColor="@android:color/black"
 
-                android:layout_marginRight="20sp"
+                android:layout_marginRight="20dp"
                 />
             <TextView
                 android:id="@+id/Expense"
@@ -112,10 +116,10 @@
 
                 android:text="......"
                 android:layout_below="@+id/Income"
-                android:layout_marginTop="20sp"
-                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="20sp"
+                android:layout_marginRight="20dp"
                 />
             <TextView
                 android:id="@+id/Total"
@@ -125,31 +129,20 @@
                 android:layout_below="@+id/Expense"
                 android:textColor="@android:color/black"
 
-                android:layout_marginTop="20sp"
-                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="20sp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 />
 
     </RelativeLayout>
 
 
     </android.support.v7.widget.CardView>
-
-        <android.support.design.widget.FloatingActionButton
-
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="350dp"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@android:color/background_dark"
-            android:clickable="true"
-            app:fabSize="normal"
-            app:srcCompat="@drawable/ic_action_new" />
-
-
-
     </LinearLayout>
+
+</RelativeLayout>
+
 
 </android.support.design.widget.CoordinatorLayout>
