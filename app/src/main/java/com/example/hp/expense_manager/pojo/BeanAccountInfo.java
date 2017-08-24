@@ -4,6 +4,16 @@ public class BeanAccountInfo {
 	String accountname;
 	String adminid;
 
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	String category;
+
 	public String getAdminid() {
 		return adminid;
 	}

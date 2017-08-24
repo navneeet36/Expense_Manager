@@ -4,15 +4,18 @@ package com.example.hp.expense_manager.Activities;
  * Created by hp on 15-Jul-17.
  */
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
@@ -39,7 +42,7 @@ public class AdminPanel extends BaseActivity {
     int columns = 2;
     TextView income, expense, total;
     ArrayList<BeanEntriesInfo> list1 = new ArrayList<>();
-//    FloatingActionButton fab;
+    FloatingActionButton fab;
 
     long in = 0;
     long outp = 0;
@@ -55,7 +58,7 @@ public class AdminPanel extends BaseActivity {
         income = (TextView) findViewById(R.id.Income);
         expense = (TextView) findViewById(R.id.Expense);
         total = (TextView) findViewById(R.id.Total);
-   //     fab = (FloatingActionButton) findViewById(R.id.fab);
+       fab = (FloatingActionButton) findViewById(R.id.fab);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         linearLayoutManager = new GridLayoutManager(this, columns);
@@ -68,14 +71,14 @@ public class AdminPanel extends BaseActivity {
 
 
         VolleyHelper.postRequestVolley(AdminPanel.this, URL_API.Entries, hashMap, RequestCodes.Entries, false);
- //       fab.setOnClickListener(new View.OnClickListener() {
-   //         @Override
- //           public void onClick(View view) {
-     //           Intent in = new Intent(AdminPanel.this, Adduser.class);
-       //         in.putExtra("adminid", adminid);
-   //             startActivity(in);
-     //       }
- //       });
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(AdminPanel.this, Adduser.class);
+                in.putExtra("adminid", adminid);
+                startActivity(in);
+            }
+        });
 
 
         recyclerView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {

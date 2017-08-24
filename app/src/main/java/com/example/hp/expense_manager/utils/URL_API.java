@@ -7,6 +7,7 @@ public class URL_API {
     public static final String LOGIN_API = baseUrl+"/Login";
     public static final String SIGN_UP = baseUrl+"/signup";
     public static final String AddAccount=baseUrl+"/Recieveaccounts";
+    public static final String AddSelAccount=baseUrl+"/RecieveSelectiveAccount";
     public static final String AddIncome=baseUrl+"/AddIncome";
     public static final String AddNewAccount=baseUrl+"/AddAccount";
     public static final String Entries=baseUrl+"/AddEntries";

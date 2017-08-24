@@ -27,14 +27,14 @@ tools:context="com.example.hp.expense_manager.Activities.AdminPanel">
         app:title=" Entries :" />
 
 </android.support.design.widget.AppBarLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        >
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/acctoaccount"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -43,9 +43,9 @@ tools:context="com.example.hp.expense_manager.Activities.AdminPanel">
             android:ems="20" />
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/acctoentries"
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="40dp"
-
+            android:layout_toRightOf="@id/acctoaccount"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="20dp"
@@ -55,9 +55,10 @@ tools:context="com.example.hp.expense_manager.Activities.AdminPanel">
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/acctoentries"
             android:id="@+id/ok"
             android:text="-->"/>
-</LinearLayout>
+</RelativeLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

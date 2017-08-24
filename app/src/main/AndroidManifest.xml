@@ -23,11 +23,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.AddIncome" />
-        <activity android:name=".Activities.AddExpense" />
-        <activity android:name=".Activities.Entries" />
-        <activity android:name=".Activities.Report" />
-        <activity android:name=".Activities.UserPage" />
-<activity android:name=".Activities.AdminPanel"/>
+        <activity android:name=".Activities.AddExpense"/>
+        <activity android:name=".Activities.Entries"/>
+        <activity android:name=".Activities.Report"/>
+        <activity android:name=".Activities.UserPage"/>
+        <activity android:name=".Activities.AdminPanel"/>
         <activity android:name=".Activities.Forget"/>
         <activity android:name=".Activities.Update"/>
 

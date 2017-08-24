@@ -93,8 +93,9 @@ if(role.equalsIgnoreCase("admin"))
 {
         HashMap<String, String> hashMap = new HashMap<String, String>();
         hashMap.put("adminid", adminid);
+    hashMap.put("category","income");
 
-        VolleyHelper.postRequestVolley(AddIncome.this, URL_API.AddAccount, hashMap, RequestCodes.AddAccount, false);
+        VolleyHelper.postRequestVolley(AddIncome.this, URL_API.AddSelAccount, hashMap, RequestCodes.AddSelAccount, false);
 }
         addaccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,6 +115,7 @@ if(role.equalsIgnoreCase("admin"))
                                    BeanAccountInfo b1 = new BeanAccountInfo();
                                    b1.setAdminid(adminid);
                                    b1.setAccountname(s);
+                                   b1.setCategory("income");
                                    Gson gson = new Gson();
                                    hashMap2.put("data", gson.toJson(b1));
                                    VolleyHelper.postRequestVolley(AddIncome.this, URL_API.AddNewAccount, hashMap2, RequestCodes.AddNewAccount, false);
@@ -228,7 +230,7 @@ if(role.equalsIgnoreCase("admin"))
     @Override
     public void requestCompleted(int requestCode, String response) {
         super.requestCompleted(requestCode, response);
-        if (requestCode == 3) {
+        if (requestCode == 16) {
             try {
                 JSONObject jsonObject = new JSONObject(response);
 
@@ -266,8 +268,8 @@ if(role.equalsIgnoreCase("admin"))
                     Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                     HashMap<String, String> hashMap = new HashMap<String, String>();
                     hashMap.put("adminid", adminid);
-
-                    VolleyHelper.postRequestVolley(AddIncome.this, URL_API.AddAccount, hashMap, RequestCodes.AddAccount, false);
+                    hashMap.put("category","income");
+                    VolleyHelper.postRequestVolley(AddIncome.this, URL_API.AddSelAccount, hashMap, RequestCodes.AddSelAccount, false);
 
                 } else
                     Snackbar.make(findViewById(R.id.main_frame), jsonObject.getString("message"), Snackbar.LENGTH_LONG).show();

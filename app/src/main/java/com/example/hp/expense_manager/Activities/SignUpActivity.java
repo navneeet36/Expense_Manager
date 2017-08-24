@@ -164,9 +164,9 @@ public class SignUpActivity extends BaseActivity {
             try {
                 JSONObject jsonObject = new JSONObject(response);
                 int i = jsonObject.getInt("success");
-                if (i == 1) {
+                if (i == 1)
+                {
                     Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
-
                 } else
                     Snackbar.make(findViewById(R.id.main_frame), jsonObject.getString("message"), Snackbar.LENGTH_LONG).show();
             } catch (Exception e) {
@@ -203,7 +203,6 @@ public class SignUpActivity extends BaseActivity {
             TextView label = (TextView) row.findViewById(android.R.id.text1);
             label.setTextColor(Color.BLACK);
             label.setText(getItem(position));
-
             return row;
         }
     }

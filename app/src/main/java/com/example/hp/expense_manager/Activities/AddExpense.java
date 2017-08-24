@@ -39,9 +39,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 
-/**
- * Created by hp on 19-Jul-17.
- */
 
 class AddExpense  extends BaseActivity implements View.OnClickListener {
 
@@ -95,8 +92,9 @@ class AddExpense  extends BaseActivity implements View.OnClickListener {
         if(role.equalsIgnoreCase("admin")) {
             HashMap<String, String> hashMap = new HashMap<String, String>();
             hashMap.put("adminid", adminid);
+            hashMap.put("category","expense");
 
-            VolleyHelper.postRequestVolley(AddExpense.this, URL_API.AddAccount, hashMap, RequestCodes.AddAccount, false);
+            VolleyHelper.postRequestVolley(AddExpense.this, URL_API.AddSelAccount, hashMap, RequestCodes.AddSelAccount, false);
         }
         addaccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,6 +116,7 @@ class AddExpense  extends BaseActivity implements View.OnClickListener {
                                     b1.setAdminid(adminid);
 
                                     b1.setAccountname(s);
+                                    b1.setCategory("expense");
                                     Gson gson = new Gson();
                                     hashMap2.put("data", gson.toJson(b1));
                                     VolleyHelper.postRequestVolley(AddExpense.this, URL_API.AddNewAccount, hashMap2, RequestCodes.AddNewAccount, false);
@@ -233,7 +232,7 @@ class AddExpense  extends BaseActivity implements View.OnClickListener {
     @Override
     public void requestCompleted(int requestCode, String response) {
         super.requestCompleted(requestCode, response);
-        if (requestCode == 3) {
+        if (requestCode == 16) {
             try {
                 JSONObject jsonObject = new JSONObject(response);
 
@@ -275,8 +274,8 @@ class AddExpense  extends BaseActivity implements View.OnClickListener {
                     Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                     HashMap<String, String> hashMap = new HashMap<String, String>();
                     hashMap.put("adminid", adminid);
-
-                    VolleyHelper.postRequestVolley(AddExpense.this, URL_API.AddAccount, hashMap, RequestCodes.AddAccount, false);
+hashMap.put("category","expense");
+                    VolleyHelper.postRequestVolley(AddExpense.this, URL_API.AddSelAccount, hashMap, RequestCodes.AddSelAccount, false);
 
                 } else
                     Snackbar.make(findViewById(R.id.main_frame), jsonObject.getString("message"), Snackbar.LENGTH_LONG).show();

@@ -44,12 +44,11 @@
                 android:padding="4dp"
                 android:id="@+id/choose"
                 android:text="Choose"/>
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
                 <Button
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/date"
                     android:layout_marginLeft="10dp"
@@ -57,24 +56,27 @@
 
                 <Button
                     android:id="@+id/but"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/date"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="from" />
 
 
                 <Button
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/date1"
+                    android:layout_toRightOf="@+id/but"
                     android:layout_marginLeft="10dp"
                     android:text="To"/>
                 <Button
-                    android:layout_width="40dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/ok"
+                    android:layout_toRightOf="@+id/date1"
                     android:text="->"/>
-            </LinearLayout>
+            </RelativeLayout>
 
             <android.support.v7.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
