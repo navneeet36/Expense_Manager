@@ -22,7 +22,7 @@ import java.util.HashMap;
  * Created by hp on 15-Jul-17.
  */
 
-class Forget  extends BaseActivity {
+public class Forget  extends BaseActivity {
     String user_name, ques, ans;
     TextView securityques;
     EditText securityans, pass, cpass;

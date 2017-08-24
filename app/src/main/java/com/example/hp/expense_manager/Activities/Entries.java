@@ -43,7 +43,7 @@ import java.util.HashMap;
  * Created by hp on 19-Jul-17.
  */
 
-class Entries extends BaseActivity implements EntryListAdapter.OnItemClickListener {
+public class Entries extends BaseActivity implements EntryListAdapter.OnItemClickListener {
 
     Toolbar toolbar;
     private ArrayList<String> arraySpinner;

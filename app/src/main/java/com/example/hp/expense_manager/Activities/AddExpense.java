@@ -40,7 +40,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 
-class AddExpense  extends BaseActivity implements View.OnClickListener {
+public class AddExpense  extends BaseActivity implements View.OnClickListener {
 
     Button btnDatePicker, btnTimePicker;
     private int mYear, mMonth, mDay, mHour, mMinute;

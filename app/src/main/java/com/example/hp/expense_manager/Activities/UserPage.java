@@ -30,7 +30,7 @@ import java.util.HashMap;
 
 
 
-class UserPage extends BaseActivity {
+public class UserPage extends BaseActivity {
     Toolbar toolbar;
     RecyclerView recyclerView;
     GridLayoutManager linearLayoutManager;

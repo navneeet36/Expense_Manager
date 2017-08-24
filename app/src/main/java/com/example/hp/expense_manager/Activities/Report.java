@@ -31,7 +31,7 @@ import java.util.HashMap;
  * Created by hp on 19-Jul-17.
  */
 
-class Report extends BaseActivity implements View.OnClickListener{
+public class Report extends BaseActivity implements View.OnClickListener{
     Toolbar toolbar;
     TextView income, expense, total;
     private int mYear, mMonth, mDay, mHour, mMinute;
